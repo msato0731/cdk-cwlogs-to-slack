@@ -1,14 +1,19 @@
-# Welcome to your CDK TypeScript project!
+# 使い方
+```
+git clone https://github.com/msato0731/cdk-cwlogs-to-slack.git
+cd cdk-cwlogs-to-slack
+npm install
+```
 
-This is a blank project for TypeScript development with CDK.
+## 必要な情報の書き換え
+`lib.cdk-cwlogs-to-slack-stack.ts`以下を、必要に応じて書き換え。
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+- slackHookUrl
+- slackChannel
+- logGroup
+- filterPattern
 
-## Useful commands
-
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+## Lambda関数のデプロイ
+```
+cdk deploy
+```
